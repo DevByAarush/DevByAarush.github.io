@@ -41,6 +41,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
+                                <li class="nav-item d-flex align-items-center">
+                    <button id="themeToggle" class="btn btn-sm btn-outline-secondary ml-lg-3" type="button"
+                        aria-label="Switch to dark mode">
+                        <span id="themeIcon">🌙</span>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -264,6 +270,35 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
+    <script>
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+
+    // Load saved theme
+    let currentTheme = localStorage.getItem("theme") || "light";
+
+    function applyTheme(theme) {
+        document.body.setAttribute("data-theme", theme);
+
+        if (theme === "dark") {
+            themeIcon.textContent = "☀️";
+            themeToggle.setAttribute("aria-label", "Switch to light mode");
+        } else {
+            themeIcon.textContent = "🌙";
+            themeToggle.setAttribute("aria-label", "Switch to dark mode");
+        }
+
+        localStorage.setItem("theme", theme);
+    }
+
+    // Apply theme on page load
+    applyTheme(currentTheme);
+
+    // Toggle theme on click
+    themeToggle.addEventListener("click", function () {
+        currentTheme = currentTheme === "light" ? "dark" : "light";
+        applyTheme(currentTheme);
+    });
+</script>
 </body>
 </html>
