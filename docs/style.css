@@ -1,0 +1,47 @@
+html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            position: relative;
+            padding-top: 70px;
+        }
+
+        section {
+            padding: 70px 15px;
+            scroll-margin-top: 65px;
+        }
+
+        #home {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #eef2ff, #ffffff);
+        }
+
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 35px;
+        }
+
+        .card {
+            border: 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-tech {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background: #212529;
+            color: white;
+        }
