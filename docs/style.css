@@ -45,3 +45,64 @@ html {
             background: #212529;
             color: white;
         }
+
+
+
+
+/* Dark / Light Theme */
+        
+                body {
+                    transition: background-color 0.3s ease, color 0.3s ease;
+                }
+        
+                /* Dark theme */
+                body[data-theme="dark"] {
+                    background-color: #121212;
+                    color: #e5e5e5;
+                }
+        
+                body[data-theme="dark"] .navbar {
+                    background-color: #1e1e1e !important;
+                }
+        
+                body[data-theme="dark"] .navbar-brand,
+                body[data-theme="dark"] .nav-link {
+                    color: #f5f5f5 !important;
+                }
+        
+                body[data-theme="dark"] .bg-light {
+                    background-color: #1a1a1a !important;
+                }
+        
+                body[data-theme="dark"] #home {
+                    background: linear-gradient(135deg, #171717, #252535);
+                }
+        
+                body[data-theme="dark"] .card {
+                    background-color: #242424;
+                    color: #e5e5e5;
+                    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+                }
+        
+                body[data-theme="dark"] .text-muted,
+                body[data-theme="dark"] .project-tech {
+                    color: #aaaaaa !important;
+                }
+        
+                body[data-theme="dark"] .text-primary {
+                    color: #8da9ff !important;
+                }
+        
+                body[data-theme="dark"] .btn-outline-dark {
+                    color: #ffffff;
+                    border-color: #aaaaaa;
+                }
+        
+                body[data-theme="dark"] .btn-outline-dark:hover {
+                    background-color: #ffffff;
+                    color: #121212;
+                }
+        
+                body[data-theme="dark"] footer {
+                    background-color: #080808;
+                }
